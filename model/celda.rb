@@ -1,48 +1,37 @@
 class Celda
 
   @elemento
+  @cantidad_de_elemntos = 0
   
   def elemento
  	@elemento
   end
 
-  def ponerCruz
-    @elemento = Cruz.new
+  def addElement(anElement)
+      if esta_llena?
+        raise  "la celda esta llena"     
+      else  
+        elemento(anElement)
+        cantidad_de_elementos=1
+      end
+  end
 
-   end
+  def esta_llena?
+    return cantidad_de_elementos == 1
+  end
 
-   def tienecruz?
-   	  return @elemento.esCruz?
-   end
+  def cantidad_de_elementos
+    return @cantidad_de_elementos 
+  end
 
-   def puedo_poner_en_celda?(una_celda)
-   	return false
-   end
+  def elemento(anElement)
+    @elemento = anElement
+  end 
+
+  def cantidad_de_elementos=(aNumber)
+    @cantidad_de_elementos = aNumber
+  end
 
 end
 
 
-class Circulo
-
-	def esCruz?
-		false
-	end 
-
-	def esCirculo?
-		true
-	end 
-  
-  
-end
-
-class Cruz
-
-	def esCruz?
-		true
-	end 
-
-	def esCirculo?
-		false
-	end 
-  
-end  
