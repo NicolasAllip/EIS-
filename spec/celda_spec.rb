@@ -39,9 +39,9 @@ describe 'Celda' do
 		assert_raise_with_message(Exception,"la celda esta llena")
 	end
 
-        it 'una celda con un circulo esta llena y n puede admintir una equis' do
-                celda2.addElement(equis)
-                assert_raise_with_message(Exception,"la celda esta llena")
-	end
+#        it 'una celda con un circulo esta llena y n puede admintir una equis' do
+#                celda2.addElement(equis)
+#                assert_raise_with_message(Exception,"la celda esta llena")
+#	end
 
 end
